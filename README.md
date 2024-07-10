@@ -28,5 +28,4 @@ To get started with the project, follow these steps:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/attendance-monitoring-system.git
-cd attendance-monitoring-system
+git clone [https://github.com/yourusername/attendance-monitoring-system.git](https://github.com/vjvijay2/Web-Based-Attendance-Monitoring-System-with-Spatio-Temporal-Human-Action-Recognition.git)
