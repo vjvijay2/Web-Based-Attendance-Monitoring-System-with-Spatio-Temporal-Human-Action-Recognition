@@ -1,0 +1,5 @@
+@media only screen and (min-width: 600px) and (max-width: 950px) {
+    div.left-panel {
+        display: none;
+    }
+}

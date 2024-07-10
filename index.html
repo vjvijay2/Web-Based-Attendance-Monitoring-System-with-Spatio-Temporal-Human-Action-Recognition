@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Attendance Web Dashoard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="poppins-regular">
+    <div class="container">
+        <div class="left-panel">
+        </div>
+        <div class="right-panel">
+            <div class="form-container">
+                <div class="form-toggle">
+                    <span class="toggle-btn active" id="toggle-login">
+                        Login
+                    </span>
+                    <span class="toggle-btn" id="toggle-registration">
+                        Register
+                    </span>
+                </div>
+                <div class="form-login form">
+                    <form id="login-form">
+                        <div class="form-inputs">
+                            <input type="text" name="LoginID" id="LoginID" value required placeholder="User ID">
+                            <input type="password" name="Password" id="Password" value required placeholder="Access Code">
+                        </div>
+                        <div id="login-form-message" class="form-message">
+                            <span id="login-message"></span>
+                        </div>
+                        <div class="form-buttons" id="login-form-buttons">
+                            <input type="submit" value="Login" id="login-button">
+                        </div>
+                    </form>
+                </div>
+                <div class="form-registration form">
+                    <form id="registration-form">
+                        <div class="form-inputs">
+                            <input type="text" name="Name" id="Name" placeholder="Name" value required>
+                            <input type="text" name="UserID" id="UserID" value required placeholder="User ID">
+                            <input type="password" name="AccessCode" id="AccessCode" value required placeholder="Access Code">
+                            <input type="email" name="Email" id="Email" placeholder="Email" value required>
+                            <input type="number" name="Mobile" id="Mobile" placeholder="Mobile" value required>
+                            <select id="Subject" name="Subject" size="1" title="Subject">
+                                <option value="Class Incharge" selected>Class Incharge</option>
+                                <option value="ECE">ECE</option>
+                                <option value="Mechanical">Mech</option>
+                                <option value="Computer Science">CS</option>
+                            </select>
+                        </div>
+                        <div id="registration-form-message" class="form-message">
+                            <span id="registration-message"></span>
+                        </div>
+                        <div class="form-buttons" id="registration-form-buttons">
+                            <input type="submit" value="Register" id="registration-button">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

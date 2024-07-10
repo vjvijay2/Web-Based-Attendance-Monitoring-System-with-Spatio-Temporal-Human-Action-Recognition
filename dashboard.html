@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer>
+        const UserData = sessionStorage.getItem('UserData');
+        const isLoggedIn = (UserData !== null) ? true : false;
+        if (!isLoggedIn) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Attendance Web Dashboard</h1>
+        <div class="header">
+            <div class="logo">
+            </div>
+            <div class="content">
+                <h2>Welcome <span id="Name"></span></h2>
+            </div>
+            <div class="logout">
+                <span class="material-symbols-outlined" id="logout-btn">
+                    logout
+                </span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="report-toggle form-toggle">
+                <span class="toggle-btn active" id="toggle-search-student">
+                    Search by Student
+                </span>
+                <span class="toggle-btn" id="toggle-search-date">
+                    Search by Date
+                </span>
+            </div>
+            <div id="student-report" class="report">
+                <div class="search-bar">
+                    <input type="text" name="student-search-query" id="student-search-query" class="search-query" placeholder="Enter Name">
+                    <div class="search-icon" id="student-search-btn">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                </div>
+                <div class="search-result" id="student-result">
+                    <div class="search-info" id="student-search-info">
+                        <span id="result-name"></span>
+                        <span id="student-search-message"></span>
+                    </div>
+                    <table id="student-result-table">
+                    </table>
+                </div>
+            </div>
+            <div id="date-report" class="report">
+                <div class="search-bar">
+                    <input type="date" name="date-search-query" id="date-search-query" class="search-query" placeholder="Enter Date">
+                    <div class="search-icon" id="date-search-btn">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+                </div>
+                <div class="search-result" id="date-result">
+                    <div class="search-info" id="date-search-info">
+                        <span id="result-date"></span>
+                        <span id="date-search-message"></span>
+                    </div>
+                    <table id="date-result-table">
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
